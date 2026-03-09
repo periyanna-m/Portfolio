@@ -1,0 +1,621 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Periyanna M | AI Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#020617;
+color:white;
+}
+
+/* AI NETWORK BACKGROUND */
+
+#network{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+position:sticky;
+top:0;
+background:#020617;
+z-index:1000;
+}
+
+nav h1{
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h2{
+font-size:55px;
+}
+
+.typing{
+color:#38bdf8;
+font-size:24px;
+margin-top:10px;
+}
+
+.hero p{
+max-width:700px;
+margin-top:20px;
+}
+
+.btn{
+margin-top:25px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#38bdf8;
+font-weight:600;
+cursor:pointer;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 100px;
+}
+
+.title{
+text-align:center;
+font-size:32px;
+margin-bottom:60px;
+color:#38bdf8;
+}
+
+/* SKILLS */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:20px;
+text-align:center;
+border-radius:10px;
+transition:0.3s;
+}
+
+.skill:hover{
+transform:translateY(-6px);
+background:#334155;
+}
+
+/* EDUCATION */
+
+.timeline{
+border-left:3px solid #38bdf8;
+padding-left:30px;
+max-width:700px;
+margin:auto;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+.timeline-item h3{
+color:#38bdf8;
+}
+
+/* PROJECT CARDS */
+
+.project-card{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+background:#0f172a;
+padding:40px;
+border-radius:20px;
+margin-bottom:100px;
+transition:0.5s;
+}
+
+.project-card:hover{
+transform:translateY(-10px) rotateY(6deg);
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+.project-text h3{
+font-size:30px;
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+.project-text p{
+margin-bottom:20px;
+line-height:1.6;
+}
+
+.project-btn{
+background:#38bdf8;
+color:black;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* IPHONE MOCKUP */
+
+.iphone-carousel{
+width:260px;
+height:520px;
+background:black;
+border-radius:40px;
+padding:15px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,0.6);
+}
+
+.carousel-track{
+display:flex;
+animation:slide 20s infinite;
+}
+
+.carousel-track img{
+width:230px;
+border-radius:25px;
+margin-right:10px;
+}
+
+/* CAROUSEL */
+
+@keyframes slide{
+
+0%{transform:translateX(0)}
+
+20%{transform:translateX(-240px)}
+
+40%{transform:translateX(-480px)}
+
+60%{transform:translateX(-720px)}
+
+80%{transform:translateX(-960px)}
+
+100%{transform:translateX(0)}
+
+}
+
+/* ACHIEVEMENTS */
+
+.list{
+max-width:700px;
+margin:auto;
+line-height:2;
+}
+
+/* CODING */
+
+.github{
+text-align:center;
+}
+
+.github img{
+margin:10px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+section{
+padding:60px 20px;
+}
+
+nav{
+padding:20px;
+}
+
+.project-card{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="network"></canvas>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h1>Periyanna</h1>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#coding">Coding</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>Hi, I'm Periyanna M</h2>
+
+<div class="typing"></div>
+
+<p>
+Computer Science Engineering student passionate about AI,
+Machine Learning and intelligent mobile applications.
+</p>
+
+<button class="btn">Download Resume</button>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<p style="max-width:700px;margin:auto;text-align:center;line-height:1.8;">
+AI focused developer currently studying Computer Science Engineering
+at Thiagarajar College of Engineering with experience in machine learning,
+mobile applications and intelligent systems.
+</p>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section>
+
+<h2 class="title">Education</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>B.E Computer Science Engineering</h3>
+<p>Thiagarajar College of Engineering — CGPA 8.32</p>
+</div>
+
+<div class="timeline-item">
+<h3>Higher Secondary</h3>
+<p>Score: 93.5%</p>
+</div>
+
+<div class="timeline-item">
+<h3>SSLC</h3>
+<p>Score: 91%</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="title">Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">Java</div>
+<div class="skill">Flutter</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">PyTorch</div>
+<div class="skill">HTML</div>
+<div class="skill">JavaScript</div>
+<div class="skill">MySQL</div>
+<div class="skill">Git</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="title">Featured Projects</h2>
+
+<div class="project-card">
+
+<div class="project-text">
+
+<h3>FarmAlly</h3>
+
+<p>
+AI agriculture platform connecting farmers with consumers
+while detecting crop diseases using machine learning.
+</p>
+
+<a class="project-btn" href="#">GitHub</a>
+
+</div>
+
+<div class="iphone-carousel">
+
+<div class="carousel-track">
+
+<img src="images/f1.jpeg">
+<img src="images/f2.jpeg">
+<img src="images/f3.jpeg">
+<img src="images/f4.jpeg">
+<img src="images/f5.jpeg">
+<img src="images/f6.jpeg">
+<img src="images/f8.jpeg">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section>
+
+<h2 class="title">Achievements</h2>
+
+<div class="list">
+
+<ul>
+
+<li>🥇 1st Place – PowerAI Hackathon</li>
+<li>🥉 3rd Place – Crack and Hack Coding Contest</li>
+<li>🥉 Ideathon Prize – Mepco Schlenk Engineering College</li>
+<li>🏆 Finalist – Idea Harvest</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- CODING -->
+
+<section id="coding">
+
+<h2 class="title">Coding Activity</h2>
+
+<div class="github">
+
+<img src="https://github-readme-stats.vercel.app/api?username=periyanna-m&show_icons=true&theme=tokyonight">
+
+<img src="https://streak-stats.demolab.com?user=periyanna-m&theme=tokyonight">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=periyanna-m&theme=tokyonight">
+
+<img src="https://leetcard.jacoblin.cool/Periyanna?theme=dark">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="contact">
+
+<p>Email: periyannasmart@gmail.com</p>
+
+<p>Phone: +91 9952712101</p>
+
+<p>GitHub: github.com/periyanna-m</p>
+
+<p>Madurai, Tamil Nadu</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Periyanna M</p>
+
+</footer>
+
+<script>
+
+/* TYPING ANIMATION */
+
+const text=["AI Developer","Flutter Developer","Machine Learning Enthusiast"]
+
+let i=0
+let j=0
+let current=""
+let isDeleting=false
+
+function type(){
+
+current=text[i]
+
+document.querySelector(".typing").textContent=current.substring(0,j)
+
+if(!isDeleting){
+j++
+if(j>current.length){
+isDeleting=true
+setTimeout(type,1000)
+return
+}
+}
+
+else{
+j--
+if(j===0){
+isDeleting=false
+i++
+if(i===text.length){
+i=0
+}
+}
+}
+
+setTimeout(type,120)
+
+}
+
+type()
+
+/* AI NETWORK BACKGROUND */
+
+const canvas=document.getElementById("network")
+const ctx=canvas.getContext("2d")
+
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+
+let particles=[]
+
+for(let i=0;i<80;i++){
+
+particles.push({
+
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+vx:Math.random()*0.5,
+vy:Math.random()*0.5
+
+})
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height)
+
+particles.forEach(p=>{
+
+p.x+=p.vx
+p.y+=p.vy
+
+if(p.x>canvas.width||p.x<0)p.vx*=-1
+if(p.y>canvas.height||p.y<0)p.vy*=-1
+
+ctx.beginPath()
+ctx.arc(p.x,p.y,2,0,Math.PI*2)
+ctx.fillStyle="#38bdf8"
+ctx.fill()
+
+})
+
+for(let i=0;i<particles.length;i++){
+for(let j=i;j<particles.length;j++){
+
+let dx=particles[i].x-particles[j].x
+let dy=particles[i].y-particles[j].y
+let dist=Math.sqrt(dx*dx+dy*dy)
+
+if(dist<120){
+
+ctx.beginPath()
+ctx.moveTo(particles[i].x,particles[i].y)
+ctx.lineTo(particles[j].x,particles[j].y)
+ctx.strokeStyle="rgba(56,189,248,0.2)"
+ctx.stroke()
+
+}
+
+}
+}
+
+requestAnimationFrame(animate)
+
+}
+
+animate()
+
+</script>
+
+</body>
+
+</html>
+```
